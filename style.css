@@ -1,0 +1,50 @@
+body, html {
+  margin: 0;
+}
+
+body {
+  height: inherit;
+  overflow: hidden;
+}
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+h1 {
+  color: transparent;
+  font-size: 2rem;
+  letter-spacing: -1px;
+  margin: 0;
+  position: absolute;
+  right: 5px;
+  text-shadow: 0 0 4px white;
+  top: -4px;
+}
+
+.ball-count, .directions {
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+}
+
+.ball-count {
+    color: #1F51FF;
+    right: 5px;
+    top: 35px;
+}
+
+.count-number {
+    color: #FF10F0;
+}
+
+.directions {
+    bottom: 1px;
+    color: #aaa;
+    right: 5px;
+    /* To center absolutely positioned block horizontally */
+    /*left: 50%;
+    transform: translate(-50%, 0);*/
+}
+
