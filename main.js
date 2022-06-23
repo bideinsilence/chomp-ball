@@ -124,6 +124,10 @@ class Ball extends Circle {
 // Object to represent Chomp-Ball
 class ChompBall extends Circle {
     
+    // Boolean for open or closed mouth; chomp
+    chomp = false;
+    // For chomping animation delay
+    chompCount = 0;
     // Start and end angles for Chomp-Ball draw
     // Initial values place Chomp-Ball facing right
     start = 0.2 * Math.PI;
@@ -133,6 +137,8 @@ class ChompBall extends Circle {
     constructor(x, y) {
         super(x, y, 20, 20, "#FFFF00", 20);
 
+        this.chomp;
+        this.chompCount;
         this.start;
         this.end;
 
@@ -168,25 +174,41 @@ class ChompBall extends Circle {
 
     // Draw Chomp-Ball
     draw() {
-        // To-do:
         // Alternate full circle and a circle with a pie piece shape missing
         // to emulate chomping
-        // ? check some if some sort of boolean is true and set it opposite
-        // with a possible countdown between sets for a longer delay between
-        // animation frames  ?
-        //
-        // ctx.arc start and end angle argument inputs are in radians
-        // π rad = 180 degrees ( a half circle )
-        // Moving up: start === 1.7 * Math.PI, end === 1.3 * Math.PI
-        // Moving down: start === 0.7 * Math.PI, end === 0.3 * Math.PI
-        // Moving left: start === 1.2 * Math.PI, end === 0.8 * Math.PI
-        // Moving right: start === 0.2 * Math.PI, end === 1.8 * Math.PI
-        ctx.beginPath();
-        ctx.fillStyle = this.color;
-        ctx.moveTo(this.x, this.y)
-        ctx.arc(this.x, this.y, this.size, this.start, this.end);
-        ctx.closePath();
-        ctx.fill();
+        // Set chmomp boolean opposite and chompCount 0 after a predetermined
+        // number of animation frames for a longer delay between frames 
+        if (this.chompCount < 10) {
+            this.chompCount += 1;
+        } else {
+            this.chomp = !this.chomp;
+            this.chompCount = 0;
+        }
+
+        // Check wether chomp boolean is true for frame shape
+        if (!this.chomp) {
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            // moveTo draws lines from arc to center of circle to create wedge
+            // cut-out
+            ctx.moveTo(this.x, this.y)
+            // ctx.arc start and end angle argument inputs are in radians
+            // π rad = 180 degrees ( a half circle )
+            // Moving up: start === 1.7 * Math.PI, end === 1.3 * Math.PI
+            // Moving down: start === 0.7 * Math.PI, end === 0.3 * Math.PI
+            // Moving left: start === 1.2 * Math.PI, end === 0.8 * Math.PI
+            // Moving right: start === 0.2 * Math.PI, end === 1.8 * Math.PI
+            ctx.arc(this.x, this.y, this.size, this.start, this.end);
+            ctx.closePath();
+            ctx.fill();
+        } else {
+            // No moveTo, full circle in radians
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+            ctx.closePath();
+            ctx.fill();
+        }
     }
 
     // Check to see whether Chomp-Ball is going to go off the edge of the screen

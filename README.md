@@ -29,12 +29,15 @@ HTML, CSS, Javascript, and the Canvas and requestAnimationFrame APIs
 ## Optimizations:
 With more time I would implement:
 - A refactor of my code to be more effecient and/or easier to understand
-- A possible static class or namespacing object to contain my global variables
-  or consider a closure.
+- A possible static class or namespacing object to contain my global variables,
+  or consider a closure or further encapsilation of my variables with their
+  functions.
 - Support for 2 players
 - An option to increase difficulty (speed) of the balls
 - "Enemies" made out of the larger balls and some sort of power-up to chomp and
   then have a short period of time to "eat" those "enemies"
+- An additional animation state between the open and closed mouth of Chomp-Ball
+  for a smoother animation experience
 - And with enough interest, I could build this out to be a more proper and full
   Pac-Man with vi movement keys clone
 
