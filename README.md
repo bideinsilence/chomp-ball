@@ -5,7 +5,7 @@ This is an extension of the MDN Web Docs tutorial:
 [bouncing balls demo](https://bideinsilence.github.io/objectBuildingPractice).
 
 I've built this tutorial out into a Pac-Man like tool (game) that uses the
-[ADM-3A and subsequently vi (and it's derivatives)](https://en.wikipedia.org/wiki/ADM-3A)
+[ADM-3A and subsequently vi (and its derivatives)](https://en.wikipedia.org/wiki/ADM-3A)
 cursor movement keys to move your Chomp-Ball character around the screen and
 help establish those movements to the point of no longer having to think
 about their placements when using.
