@@ -1,6 +1,8 @@
 # Chomp-Ball
 ![Chomp-Ball](chomp-ball.png)
 
+Gotta Chomp 'em all.
+
 This is an extension of the MDN Web Docs tutorial: 
 [bouncing balls demo](https://bideinsilence.github.io/objectBuildingPractice).
 
