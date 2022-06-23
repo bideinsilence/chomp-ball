@@ -50,5 +50,5 @@ to practice working with JavaScript classes, some of the browser APIs, and the
 programming logic to gamify and build a simple tool to that can ingrain the
 basic vi cursor movements into your muscle memory. My only regret is that I
 didn't version control this project sooner so that I could look back through the
-steps I took if I ever have te need.
+steps I took if I ever have the need.
 
