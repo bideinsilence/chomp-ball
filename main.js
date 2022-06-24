@@ -147,21 +147,25 @@ class ChompBall extends Circle {
         // Store orientation for Chomp-Ball draw
         window.addEventListener("keydown", (e) => {
             switch(e.key) {
+                // UP
                 case "k":
                     this.y -= this.velY;
                     this.start = 1.7 * Math.PI;
                     this.end = 1.3 * Math.PI;
                     break;
+                // Down
                 case "j":
                     this.y += this.velY;
                     this.start = 0.7 * Math.PI;
                     this.end = 0.3 * Math.PI;
                     break;
+                // Left
                 case "h":
                     this.x -= this.velX;
                     this.start = 1.2 * Math.PI;
                     this.end = 0.8 * Math.PI;
                     break;
+                // Right
                 case "l":
                     this.x += this.velX;
                     this.start = 0.2 * Math.PI;

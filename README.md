@@ -10,7 +10,8 @@ I've built this tutorial out into a Pac-Man like tool (game) that uses the
 [ADM-3A and subsequently vi (and its derivatives)](https://en.wikipedia.org/wiki/ADM-3A)
 cursor movement keys to move your Chomp-Ball character around the screen and
 help establish those movements to the point of no longer having to think
-about their placements when using.
+about their placements when using. A and idea that helped me when I was first
+learning was to think of the j key as sort of looking like a down arrow.
 
 ![The ADM-3A terminal keyboard](KB_Terminal_ADM3A.png)
 
